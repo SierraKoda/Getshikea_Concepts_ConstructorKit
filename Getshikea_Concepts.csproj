@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7779DAF9-0FC2-4C50-B4F3-659C1AFD6112}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Getschi_Motos_WebApp</RootNamespace>
+    <AssemblyName>Getschi_Motos_WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <EnableSecurityDebugging>true</EnableSecurityDebugging>
+    <Install>False</Install>
+    <StartAction>URL</StartAction>
+    <HostInBrowser>true</HostInBrowser>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <TargetZone>Internet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>True</SignManifests>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Compile Include="AddAppointment.cs" />
+    <Compile Include="AddAppointment.xaml.cs">
+      <DependentUpon>AddAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddChronologicalObjData.cs" />
+    <Compile Include="AddChronologicalObjHandler.cs" />
+    <Compile Include="AddComponent.cs" />
+    <Compile Include="AddInvoice.cs" />
+    <Compile Include="AddPrimaryObj.cs" />
+    <Compile Include="AddPrimaryObjHandler.cs" />
+    <Compile Include="AddSecondaryObjHandler.cs" />
+    <Compile Include="AddUser.cs" />
+    <Compile Include="AliasAsignmentCustomEncodingHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncodingIOAccessPermission.cs" />
+    <Compile Include="AliasAsignmentCustomEncodingIOAccessPermissionResolver.cs" />
+    <Compile Include="AliasAsignmentCustomEncodingPrompt.cs" />
+    <Compile Include="AliasAsignmentCustomEncodingResolver.cs" />
+    <Compile Include="AliasAsignmentCustomEncodingResolverHanlder.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_AliasData.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ANSI.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovalTokenHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovalTokenProvider.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovalTokenResolver.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovalTokenResolverException.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovalTokenResolverExceptionHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedBase64String.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedBSSID.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedByteParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedByteRate.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedByteShift.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedByteStream.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedCDMAParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedConfigFile.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedConfigTokenResolver.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedDataByteStreamRequest.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedDataByteStreamTransfer.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedDNSParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedEncodingBuffer.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedEncodingBufferByteRate.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedEncodingParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedEncodings.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedFireWallProxies.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedFTPParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedGSMParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedHexidecimal64String.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedHostNameParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedHostParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedHTTPQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedHTTPSQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedInterOpParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedIOPortConfig.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedIOPortParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedIPAddress.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedIPv4IPv6Parameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedIPv4Queries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedIPv6Queries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovediStreamParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedJSONQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedJSParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedJSQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedLANParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedLDAPQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedLINQQQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedLocationParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedLoopBackProxies.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedMACAddress.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedMETAParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedMySQLParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedMySQLQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedNetworkMaps.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedNullReference.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedOVPNParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedPCKS.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedPHPParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedPHPQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedPKCSParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedPRNGAlogorithms.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedQueryString.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedRuleSetFile.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedSMTPQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedSOCKsParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedSOCKsProxies.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedSSID.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedSubnetMask.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedTCPIPParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedTCPQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedTraceParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedTTYParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedTTYQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedUDPParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedUDPQueries.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedUserGroupParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedUserRequest.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedVLANParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedVPNParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedWAFProxies.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ApprovedWLANParameters.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ASCII.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Async.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_AUTORUN.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_AutorunRulesetResolver.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_BIN.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_BITLINK.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Byte.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ByteStream.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Cert.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_CertAuthorityToken.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Checksum.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Config.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_CSS.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_CSV.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_DirectoryPath.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_DLL.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionAddExecute.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionAddRead.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionAddWrite.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionClose.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionDeleteExecute.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionDeleteRead.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionDeleteWrite.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEdit.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEditHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEditTokenException.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEditTokenExceptionHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEditTokenHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEditTokenParser.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEditTokenProvider.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionEditTokenResolver.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionToken.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EMEI.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ExceptionHandler.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_EXE.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_FilePath.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_FTP.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ghost.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HASH.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HeuristicsAutomationRoutine.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HeuristicsChronologicalRuleSet.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HeuristicsPresentWrite.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HeuristicsQuery.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HeuristicsRuleSet.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Hexidecimal.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HID.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HMAC.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HMACSHA3-512.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HTTP.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_HTTPS.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Info.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_init.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_InterOp.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_IOPortRuleSet.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_IPv4.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_IPv6.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_ISO.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_JS.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_JSON.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_LabelDescriptor.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_LDAP.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Logcat.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_MACAddress.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_MultiMedia.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_MySQL.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_OAuthStream.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_OVN.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_OVPN.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_PHP.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_PKCS.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_PKey.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_POP3.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_PY.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_QUERY.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_RIPEMD160.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_RuleSet.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_run.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_RuntimeLoop.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SecureShell_sh.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SHA128.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SHA256.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SHA384.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SHA512.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SMTP.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SSID.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_SubNetMask.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_TCP.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_TimeDateObj.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_TTY.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_UDP.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_Unicode.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_URLdata.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_UTF16.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_UTF32.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_UTF8.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_VBOX.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_VMWare.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_VPN.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_XAML.cs" />
+    <Compile Include="AliasAsignmentCustomEncoding_XML.cs" />
+    <Compile Include="AliasAssignmentDataResolverSecondaryObj.cs" />
+    <Compile Include="AliasAssignmentDataResolverSecondaryObjHandler.cs" />
+    <Compile Include="AliasAssignmentPrimaryObj.cs" />
+    <Compile Include="AliasAssignmentPrimaryObjHandler.cs" />
+    <Compile Include="AliasAssignmentTableResolverPrimaryObj.cs" />
+    <Compile Include="AliasReferenceHasKeyIndexResolverHandler.cs" />
+    <Compile Include="AliasReferenceHasKeyIndexResolverSecondaryObj.cs" />
+    <Compile Include="AliasReferenceHasKeyResolverPrimaryObj.cs" />
+    <Compile Include="AliasReferenceHasKeyResolverPrimaryObjHandler.cs.cs" />
+    <Compile Include="AliasReferenceHasKeyResolverSecondaryObj.cs" />
+    <Compile Include="AliasReferenceHasKeyResolverSecondaryObjHanlder.cs" />
+    <Compile Include="AppointmentDefinition.cs" />
+    <Compile Include="AppointmentEditor.cs" />
+    <Compile Include="AppointmentFormTemplate.xaml.cs">
+      <DependentUpon>AppointmentFormTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments.xaml.cs">
+      <DependentUpon>Appointments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalTokenResolverException.cs" />
+    <Compile Include="ApprovalTokenResolverExceptionHandler.cs" />
+    <Compile Include="ApprovedHostSerivceNegotiator.cs" />
+    <Compile Include="ApprovedSQLHeuristics.cs" />
+    <Compile Include="ApprovedTokenIntegrityAuthenticator.cs" />
+    <Compile Include="ApprovedTokenIntegrityRuleResolver.cs" />
+    <Compile Include="AssignAliasPrimaryObjHandler.cs" />
+    <Compile Include="AssignAliasWriteSecondaryObj.cs" />
+    <Compile Include="AssignAliasWriteSecondaryObjHandler.cs" />
+    <Compile Include="AssignCustomAliasSecondaryObj.cs" />
+    <Compile Include="AssignCustomAliasSecondaryObjHandler.cs" />
+    <Compile Include="AsyncDataObjAutomation.cs" />
+    <Compile Include="AsyncDataObjException.cs" />
+    <Compile Include="AsyncDataObjExceptionHandler.cs" />
+    <Compile Include="AsyncDataObjExceptionPrompt.cs" />
+    <Compile Include="AsyncDataObjResolver.cs" />
+    <Compile Include="AuthenticationCredentialResolver.cs" />
+    <Compile Include="AuthInterfaceForm.xaml.cs">
+      <DependentUpon>AuthInterfaceForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AuthUpdateRequestTokenHandler.cs" />
+    <Compile Include="Automation.cs" />
+    <Compile Include="AutomationHeuristics.cs" />
+    <Compile Include="AutomationRuntimeException.cs" />
+    <Compile Include="AutomationRuntimeExceptionHandler.cs" />
+    <Compile Include="ByteAutomation.cs" />
+    <Compile Include="ByteCodeUpdateResolver.cs" />
+    <Compile Include="ByteStreamiFormatter.cs" />
+    <Compile Include="ByteStreamResolver.cs" />
+    <Compile Include="CalendarVeiw.xaml.cs">
+      <DependentUpon>CalendarVeiw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogueNumberIdentifierKeyAssignment.cs" />
+    <Compile Include="CatalogueNumberIdentifierKeyResolver.cs" />
+    <Compile Include="CatalogueNumberIdentifierWrite.cs" />
+    <Compile Include="CatalogueNumberIdentifierWriteHandler.cs" />
+    <Compile Include="CatalogueNumberIdentifierWritePreparer.cs" />
+    <Compile Include="CatalogueNumberResolver.cs" />
+    <Compile Include="CatchIOException.cs" />
+    <Compile Include="CatchIOExceptionTokenHandler.cs" />
+    <Compile Include="CatchIOExceptionTokenProvider.cs" />
+    <Compile Include="ClientContactDataResolver.cs" />
+    <Compile Include="ClientContactDetailHandler.cs" />
+    <Compile Include="ClientContactDetailResolver.cs" />
+    <Compile Include="ClientContactDetailWrite.cs" />
+    <Compile Include="ClientContactDetailWriteHandler.cs" />
+    <Compile Include="ClientContactHeuristics.cs" />
+    <Compile Include="ClientContactIndexKeyAutomation.cs" />
+    <Compile Include="ClientContactKeyAssignment.cs" />
+    <Compile Include="ClientContactKeyResolver.cs" />
+    <Compile Include="ComponentWriteHandler.cs" />
+    <Compile Include="CredentialAuth.cs" />
+    <Compile Include="CredentialCertificateResolver.cs" />
+    <Compile Include="CredentialTokenAuth.cs" />
+    <Compile Include="CryptographyHeuristics.cs" />
+    <Compile Include="DataComponentHandler.cs" />
+    <Compile Include="DataComponentHeuristics.cs" />
+    <Compile Include="DataDisposalAutomation.cs" />
+    <Compile Include="DataRuleSheetParser.cs" />
+    <Compile Include="DataSetAdmin.xaml.cs">
+      <DependentUpon>DataSetAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAppointment.xaml.cs">
+      <DependentUpon>DeleteAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteChronologicalObjData.cs" />
+    <Compile Include="DeleteChronologicalObjDataHandler.cs" />
+    <Compile Include="DeletePrimaryObj.cs" />
+    <Compile Include="DeletePrimaryObjHandler.cs" />
+    <Compile Include="DeleteSecondaryObjData.cs" />
+    <Compile Include="DeleteSecondaryObjHandler.cs" />
+    <Compile Include="DetailDataKeyAssignment.cs" />
+    <Compile Include="DetailDataResolver.cs" />
+    <Compile Include="DetailDataWriteHandler.cs" />
+    <Compile Include="DetailDataWritePreparer.cs" />
+    <Compile Include="EditAliasAssignDataSecondaryObj.cs" />
+    <Compile Include="EditAliasAssignDataSecondaryObjHandler.cs" />
+    <Compile Include="EditAppointment.xaml.cs">
+      <DependentUpon>EditAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditChronologicalObjData.cs" />
+    <Compile Include="EditChronologicalObjDataHandler.cs" />
+    <Compile Include="EditPrimaryObj.cs" />
+    <Compile Include="EditPrimaryObjHandler.cs" />
+    <Compile Include="EditSecondaryObjData.cs" />
+    <Compile Include="EditSecondaryObjHandler.cs" />
+    <Compile Include="EncodedBytesPreparer.cs" />
+    <Compile Include="EncodedBytesResolver.cs" />
+    <Compile Include="EncodedBytesUpdateReceiver.cs" />
+    <Compile Include="EncodedBytesUpdateRequestResolver.cs" />
+    <Compile Include="EncodedFormLoadHandler.cs" />
+    <Compile Include="EncodingAutomation.cs" />
+    <Compile Include="EncodingResolver.cs" />
+    <Compile Include="EncryptionHeuristicsAutomation.cs" />
+    <Compile Include="EncryptionHeuristicsHandler.cs" />
+    <Compile Include="FileIOAccessPermissionsExec.cs" />
+    <Compile Include="FileIOAccessPermissionsRead.cs" />
+    <Compile Include="FileIOAccessPermissionsWrite.cs" />
+    <Compile Include="FileIOExceptionHandlerNative.cs" />
+    <Compile Include="FormLoadoutHeuristics.cs" />
+    <Compile Include="FormPreparer.cs" />
+    <Compile Include="FormUpdateResolver.cs" />
+    <Compile Include="GeneralHeuristics.cs" />
+    <Compile Include="GesthikeaSolidPaging.xaml.cs">
+      <DependentUpon>GesthikeaSolidPaging.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuestFileIOAccessPermissionsExec.cs" />
+    <Compile Include="GuestFileIOAccessPermissionsRead.cs" />
+    <Compile Include="GuestFileIOAccessPermissionsWrite.cs" />
+    <Compile Include="HeuristicsDataPreparer.cs" />
+    <Compile Include="HMACSHA3-512Handler.cs" />
+    <Compile Include="HMACSHA3512CacheHandler.cs" />
+    <Compile Include="HostResolver.cs" />
+    <Compile Include="IndexHeuristics.cs" />
+    <Compile Include="InvalidAddDataItemHandler.cs" />
+    <Compile Include="InvalidAddDataItemPrompt.cs" />
+    <Compile Include="InvalidEditRequestHandler.cs" />
+    <Compile Include="InvalidEditRequestPrompt.cs" />
+    <Compile Include="InvalidPrimaryException.cs" />
+    <Compile Include="InvalidPrimaryExceptionHandler.cs" />
+    <Compile Include="InvalidSecondaryDataExceptionPrompt.cs" />
+    <Compile Include="InvalidSecondaryObjDataException.cs" />
+    <Compile Include="InvalidSecondaryObjDataExceptionHandler.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="DateTimeInterfaceIO.cs" />
+    <Compile Include="InvoiceBuildOutPreview.xaml.cs">
+      <DependentUpon>InvoiceBuildOutPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceBuildOutRuntime.cs" />
+    <Compile Include="InvoiceBuildWizard.xaml.cs">
+      <DependentUpon>InvoiceBuildWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDataHandler.cs" />
+    <Compile Include="InvoiceEditHandler.cs" />
+    <Compile Include="InvoiceWriteHandler.cs" />
+    <Compile Include="IOExceptionAutomationHandler.cs" />
+    <Compile Include="IOExceptionTokenHeuristics.cs" />
+    <Compile Include="IOPortResolver.cs" />
+    <Compile Include="KeyAssignmentIndexParser.cs" />
+    <Compile Include="KeyIndexAutomationHandler.cs" />
+    <Compile Include="KeyIndexAutomationPreparer.cs" />
+    <Compile Include="KeyIndexAutomationRuntime.cs" />
+    <Compile Include="KeyPairAutomation.cs" />
+    <Compile Include="KeywordAliasKeyAssignmentHandler.cs" />
+    <Compile Include="KeywordAliasServiceHandler.cs" />
+    <Compile Include="KeywordAliasWriteHandler.cs" />
+    <Compile Include="KeywordAliasWritePreparer.cs" />
+    <Compile Include="KeywordDataResolver.cs" />
+    <Compile Include="LabelDataKeyAssignment.cs" />
+    <Compile Include="LabelDataResolver.cs" />
+    <Compile Include="LabelDataWrite.cs" />
+    <Compile Include="LabelDataWriteHandler.cs" />
+    <Compile Include="LabelDataWritePreparer.cs" />
+    <Compile Include="LibraryAutomationHandler.cs" />
+    <Compile Include="LibraryComponentHandler.cs" />
+    <Compile Include="LibraryComponentResolver.cs" />
+    <Compile Include="LibraryDataPreparer.cs" />
+    <Compile Include="LibraryDataWrite.cs" />
+    <Compile Include="LibraryDataWriteHandler.cs" />
+    <Compile Include="LibraryHandler.cs" />
+    <Compile Include="LibraryHeuristics.cs" />
+    <Compile Include="LibraryInvoiceWrite.cs" />
+    <Compile Include="LinkDistribution.cs" />
+    <Compile Include="LinqCreateTableHandler.cs" />
+    <Compile Include="LinqDataTableHandler.cs" />
+    <Compile Include="LinqHeuristics.cs" />
+    <Compile Include="LinqQueryStringPreparer.cs" />
+    <Compile Include="LinqQueryTablesHandler.cs" />
+    <Compile Include="LinqSelectHandler.cs.cs" />
+    <Compile Include="LinqUnionHandler.cs" />
+    <Compile Include="LocalDataHandler.cs" />
+    <Compile Include="LocalTempDataHandler.cs" />
+    <Compile Include="LogCat.cs" />
+    <Compile Include="LogCatAutomation.cs" />
+    <Compile Include="LogCatDataWrite.cs" />
+    <Compile Include="LogCatDataWriteHandler.cs" />
+    <Compile Include="LogCatHandler.cs" />
+    <Compile Include="LogCatHeuristicsHandler.cs" />
+    <Compile Include="LogCatPreparer.cs" />
+    <Compile Include="LogCatQueryResolver.cs" />
+    <Compile Include="LogCatWriteAccessQuery.cs" />
+    <Compile Include="LogCatWriteHandler.cs" />
+    <Compile Include="LogCatWriteSuccessTokenProvider.cs" />
+    <Compile Include="LogExceptionWrite.cs" />
+    <Compile Include="LogExceptionWriteHandler.cs" />
+    <Compile Include="LogWriteTokenHandler.cs" />
+    <Compile Include="LogWriteTokenProvider.cs" />
+    <Compile Include="MakeAliasAssignmentSecondaryObj.cs" />
+    <Compile Include="MakeAliasAssignmentSecondaryObjHandler.cs" />
+    <Compile Include="MakeAsignAliasCustomEncodingHandler.cs" />
+    <Compile Include="MakeAsignAliasWriteCustomEncoding.cs" />
+    <Compile Include="MakeAssignAliasPrimaryObj.cs" />
+    <Compile Include="PrimaryObjDataEditHandler.cs" />
+    <Compile Include="PrimaryObjDataPreparer.cs" />
+    <Compile Include="PrimaryObjDataResolver.cs" />
+    <Compile Include="PrimaryObjKeyAssignment.cs" />
+    <Compile Include="PrimaryObjKeyResolver.cs" />
+    <Compile Include="PrimaryObjWriteHandler.cs" />
+    <Compile Include="PrimaryObjWritePreparer.cs" />
+    <Compile Include="SecondaryObjDataKeyAssignment.cs" />
+    <Compile Include="SecondaryObjDataResolver.cs" />
+    <Compile Include="SecondaryObjDataWriteHandler.cs" />
+    <Compile Include="SecondaryObjDataWritePreparer.cs" />
+    <Compile Include="MultiLayerFormattingAutomation.cs" />
+    <Compile Include="ProfileDataWriteHandler.cs" />
+    <Compile Include="ProfileEditHandler.cs" />
+    <Compile Include="ProfileFormLoader.cs" />
+    <Compile Include="Properties\Biographical.xaml.cs">
+      <DependentUpon>Biographical.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\CalendarEventVeiw.xaml.cs">
+      <DependentUpon>CalendarEventVeiw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DataRepo.cs" />
+    <Compile Include="Properties\InvoiceVeiw.xaml.cs">
+      <DependentUpon>InvoiceVeiw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\LinqPreparer.cs" />
+    <Compile Include="Properties\SearchIO.cs" />
+    <Compile Include="Properties\SearchOutput.xaml.cs">
+      <DependentUpon>SearchOutput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SearchOutputHandler.xaml.cs">
+      <DependentUpon>SearchOutputHandler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SecurityDetails.xaml.cs">
+      <DependentUpon>SecurityDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SQLpreparer.cs" />
+    <Compile Include="Properties\UserDisplay.xaml.cs">
+      <DependentUpon>UserDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\UserProfileVeiw.xaml.cs">
+      <DependentUpon>UserProfileVeiw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QueryLogCat.cs" />
+    <Compile Include="QueryLogCatHandler.cs" />
+    <Compile Include="QuerySearch.xaml.cs">
+      <DependentUpon>QuerySearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReviseAppointment.cs" />
+    <Compile Include="ReviseSearch.cs" />
+    <Compile Include="RIPEMD160Handler.cs" />
+    <Compile Include="RIPEMD160SessionHandler.cs" />
+    <Compile Include="RipeMD160TemplateBlank.xaml.cs">
+      <DependentUpon>RipeMD160TemplateBlank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs" />
+    <Compile Include="SearchFormTemplate.xaml.cs">
+      <DependentUpon>SearchFormTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTemplate.xaml.cs">
+      <DependentUpon>SearchTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceResolver.cs" />
+    <Compile Include="SessionAccessAuthHandler.cs" />
+    <Compile Include="SessionAccessPermissionTokenHandler.cs" />
+    <Compile Include="SessionAccessTokenProvider.cs" />
+    <Compile Include="SessionAutomation.cs" />
+    <Compile Include="SessionFileIOAccessPermissions.cs" />
+    <Compile Include="SessionHostServiceResolver.cs" />
+    <Compile Include="SessionTokenHeuristics.cs" />
+    <Compile Include="SHA512Handler.cs" />
+    <Compile Include="SQLLinq.cs" />
+    <Compile Include="Staff.xaml.cs">
+      <DependentUpon>Staff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StringLiteralHandler.cs" />
+    <Compile Include="StyleSheetFormAutomation.cs" />
+    <Compile Include="StyleSheetKeyAssignment.cs" />
+    <Compile Include="StyleSheetKeyAssignmentResolver.cs" />
+    <Compile Include="StyleSheetKeyAutomation.cs" />
+    <Compile Include="StyleSheetStringLiteralAutomation.cs" />
+    <Compile Include="StyleSheetStringLiteralResolver.cs" />
+    <Compile Include="TableAliasAssignDataSecondaryObj.cs" />
+    <Compile Include="TableAliasAssignmentPrimaryObj.cs" />
+    <Compile Include="TCPClientResolver.cs" />
+    <Compile Include="TCPHeuristics.cs" />
+    <Compile Include="TCPIOPortAssignmentHandler.cs" />
+    <Compile Include="TCPPortAssignmentResolver.cs" />
+    <Compile Include="TCPSessionTokenResolver.cs" />
+    <Compile Include="TCPStreamAuth.cs" />
+    <Compile Include="TCPStreamResolver.cs" />
+    <Compile Include="TempalteHeuristics.cs" />
+    <Compile Include="TempDataAutomation.cs" />
+    <Compile Include="TempDataDisposal.cs" />
+    <Compile Include="TempDataHandler.cs" />
+    <Compile Include="TempDataHeuristics.cs" />
+    <Compile Include="TempDataKeyAssignment.cs" />
+    <Compile Include="TempDataKeyAutomation.cs" />
+    <Compile Include="TempDataKeyResolver.cs" />
+    <Compile Include="TempDataKeyWrite.cs" />
+    <Compile Include="TempDataResolver.cs" />
+    <Compile Include="TempDataWrite.cs" />
+    <Compile Include="TempDataWriteHandler.cs" />
+    <Compile Include="TokenAutomation.cs" />
+    <Compile Include="TokenIntegrityAutomation.cs" />
+    <Compile Include="TokenIntegrityHeuristics.cs" />
+    <Compile Include="UpdateLogCatHandler.cs" />
+    <Compile Include="UpdateResolver.cs" />
+    <Compile Include="UserAppointmentHandler.cs" />
+    <Compile Include="UserAuth.cs" />
+    <Compile Include="UserAuthHeurisitcs.cs" />
+    <Compile Include="UserAuthIO.xaml.cs">
+      <DependentUpon>UserAuthIO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPanel.xaml.cs">
+      <DependentUpon>UserControlPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserCredentialParser.cs" />
+    <Compile Include="UserDataWrite.cs" />
+    <Compile Include="UserIODataHandler.cs" />
+    <Compile Include="UserPanelIO.cs" />
+    <Compile Include="UserProfileDataHandler.cs" />
+    <Compile Include="UserProfileTemplate.xaml.cs">
+      <DependentUpon>UserProfileTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserQueryAuthHandler.cs" />
+    <Compile Include="UserQueryDataAutomation.cs" />
+    <Compile Include="UserQueryTokenProvider.cs" />
+    <Compile Include="UserQueryWrite.cs" />
+    <Compile Include="UserQueryWriteAutomation.cs" />
+    <Compile Include="UserQueryWriteHandler.cs" />
+    <Compile Include="UserQueryWritePreparer.cs" />
+    <Compile Include="UserTokenAuth.cs" />
+    <Compile Include="UTF8BytesPreparer.cs" />
+    <Compile Include="UTFResolver.cs" />
+    <Compile Include="ChronologicalObjDataKeyAssignment.cs" />
+    <Compile Include="ChronologicalObjDataResolver.cs" />
+    <Compile Include="ChronologicalObjDataWriteHandler.cs" />
+    <Compile Include="ChronologicalObjDataWritePreparer.cs" />
+    <Page Include="AddAppointment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="AliasAsignmentCustomEncodingDataResolver.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="AliasAsignmentCustomEncoding_BSSID.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Page Include="AliasAsignmentCustomEncoding_ApprovalDataSet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AliasAsignmentCustomEncoding_EditIOAccessPermissionTokenData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="AliasAsignmentCustomEncoding_IOAccessDataResolver.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Page Include="AliasAsignmentCustomEncoding_IOAccessPermissionData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="AliasAsignmentCustomEncoding_IOAccessPermissionDataResolver.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Page Include="AliasAsignmentCustomEncoding_IOPortNumber.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="AliasAsignmentCustomEncoding_IPAddress.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="AliasAsignmentCustomEncoding_IPv4Address.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="AliasAsignmentCustomEncoding_IPv6Address.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Compile Include="AliasAssignmentDataSecondaryObj.cs">
+      <Generator>MSBuild:Compile</Generator>
+    </Compile>
+    <Page Include="AliasAssignmentPrimaryObjData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AliasKeyIndexLinkDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppointmentDetailsDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppointmentFormTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppointmentResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Appointments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ApprovedQueryStrings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AuthInterfaceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CalendarVeiw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientContactDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataSetAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataSetRoutineGuidelines.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteAppointment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditAppointment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeReferences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExceptionHandlerRulesets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FileIOAccessGuidelines.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GesthikeaSolidPaging.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HeuristicsDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HeuristicsDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IdentifierNumberDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InvoiceBuildOutPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InvoiceBuildWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Invoicing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KeyIndexDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LibraryComponentStorageParser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LocalTempDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogCatDataGuidelines.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrimaryObjDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecondaryObjDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiDimensionalRoutineCipher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MultiDimensionAutomation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleSheetMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Invoicing.xaml.cs">
+      <DependentUpon>Invoicing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StyleSheetMain.xaml.cs">
+      <DependentUpon>StyleSheetMain.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ProfileDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\Biographical.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\CalendarEventVeiw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\InvoiceVeiw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\SearchOutput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\SearchOutputHandler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\SecurityDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\UserDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\UserProfileVeiw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuerySearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RIPEMD160DetailDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RipeMD160TemplateBlank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchFormTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SQLLocal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SQLlocaltemp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Staff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleSheetKeyData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleSheetStringLiteralDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TempDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TokenDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAuthIO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserProfileDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserProfileTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserQueryLocalTemp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersCredentialParser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserSpecificSessionRulesets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserWriteLocalTempDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChronologicalObjDataDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Getschi_Motos_WebApp_TemporaryKey.pfx" />
+    <None Include="Properties\ApprovedQueryReg.ruleset" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="QueryDataDictionary.xa">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="SlideKeyAutomationGuidelines.ruleset" />
+  </ItemGroup>
+  <PropertyGroup>
+    <StartArguments />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Getschi_Motos_WebApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BE89A882286373A69F842312F7197D7566783631</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
